@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>kickmybet</title>
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="logo"></div>
+				<form class="navbar-form navbar-right">
+					<p class="acc-info">Hi, <span>Trololo</span><br>Availiable balance: USD <span>40.00</span></p>
+					<ul class="login">
+						<li><a style="color: rgb(255, 234, 168);" href="#">Account</a></li>
+						<li><a href="#">Deposit</a></li>
+						<li><a href="#">Log out</a></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</header>
+	<div class="header-line">
+		<div class="circle"></div>
+		<div class="line"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="vside-adline col-lg-6 col-md-7 col-sm-8">
+				<div class="v-lines"></div>
+			</div>
+			<div class="vtcenter-line col-lg-18 col-md-17 col-sm-16">
+				<div class="v-lines"></div>
+			</div>
+		</div>
+	</div>
+	<section class="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-7 col-sm-8">
+					<div class="side-menu">
+						<ul>
+							<li><a href="">Personal details</a></li>
+							<li><a href="">Payment source</a></li>
+							<li><a href="">Bet history</a></li>
+							<li><a href="">Account history</a></li>
+							<li><a href="">Login history</a></li>
+							<li><a href="">Change password</a></li>
+							<li><a href="">Other settings</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-18 col-md-17 col-sm-16">
+					<div class="center-content col-lg-24 col-md-24 col-sm-24">
+						<h2>My Account</h2>						
+						<p>Account number: <span>00000000</span></p>
+						<table class="info-balance">
+							<tbody>
+								<tr>
+									<td>Available balance:</td>
+									<td>USD 40.00</td>
+								</tr>
+								<tr>
+									<td>Unsettled bets:</td>
+									<td>USD 10.00</td>
+								</tr>
+								<tr>
+									<td>Pending withdrowals:</td>
+									<td>USD 00.00</td>
+								</tr>
+							</tbody>
+						</table>		
+						<div class="v-space"></div>			
+						<h2>Other settings</h2>
+						<div class="deposit-info">
+							<form class="form-inline">							
+								<label>Inactivity timeout:</label>	
+								<select class="form-control">
+									<option disabled selected hidden>--</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+								<span>minutes</span>
+							</form>	
+							<form class="form-inline">							
+								<label>Time zone:</label>	
+								<select class="form-control">
+									<option disabled selected hidden>--</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</form>	
+							<form class="form-inline">							
+								<label>Odds type:</label>	
+								<select class="form-control">
+									<option disabled selected hidden>--</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</form>	
+							<form class="form-inline">							
+								<label>Automatical confirmation<br>of the change of odds:</label>	
+								<select class="form-control">
+									<option disabled selected hidden>--</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</form>	
+							<form class="form-inline">							
+								<label>Show current balance:</label>
+								<div class="check-pos">	
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+											Yes
+										</label>
+									</div>
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+											No
+										</label>
+									</div>
+								</div>
+							</form>		
+							<button class="btn-primary btn">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		/*Line width*/
+		$(window).resize(function(){
+			$w = $(window).outerWidth()
+			$('.header-line').css({
+				width: $w - 60,
+				marginLeft: -($w - 60)/2,
+				left: $w/2
+			});
+			$('.line').css({
+				width: $w - 92
+			});
+			$('.main-content').css({
+				minHeight: $(window).outerHeight() - $('header').outerHeight()
+			});
+		});
+		$(window).resize();
+	</script>
+</body>
+</html>

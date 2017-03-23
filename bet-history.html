@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>kickmybet</title>
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="logo"></div>
+				<form class="navbar-form navbar-right">
+					<p class="acc-info">Hi, <span>Trololo</span><br>Availiable balance: USD <span>40.00</span></p>					
+					<ul class="login">
+						<li><a style="color: rgb(255, 234, 168);" href="#">Account</a></li>
+						<li><a href="#">Deposit</a></li>
+						<li><a href="#">Log out</a></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</header>
+	<div class="header-line">
+		<div class="circle"></div>
+		<div class="line"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="vside-adline col-lg-6 col-md-7 col-sm-8">
+				<div class="v-lines"></div>
+			</div>
+			<div class="vtcenter-line col-lg-18 col-md-17 col-sm-16">
+				<div class="v-lines"></div>
+			</div>
+		</div>
+	</div>
+	<section class="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-7 col-sm-8">
+					<div class="side-menu">
+						<ul>
+							<li><a href="">Personal details</a></li>
+							<li><a href="">Payment source</a></li>
+							<li><a href="">Bet history</a></li>
+							<li><a href="">Account history</a></li>
+							<li><a href="">Login history</a></li>
+							<li><a href="">Change password</a></li>
+							<li><a href="">Other settings</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-18 col-md-17 col-sm-16">
+					<div class="center-content col-lg-24 col-md-24 col-sm-24">
+						<h2>My Account</h2>						
+						<p>Account number: <span>00000000</span></p>
+						<table class="info-balance">
+							<tbody>
+								<tr>
+									<td>Available balance:</td>
+									<td>USD 40.00</td>
+								</tr>
+								<tr>
+									<td>Unsettled bets:</td>
+									<td>USD 10.00</td>
+								</tr>
+								<tr>
+									<td>Pending withdrowals:</td>
+									<td>USD 00.00</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btn-group">								
+							<button class="btn-default btn" style="margin: 20px 0 0 0;">Withdrow</button>	
+						</div>
+						<div class="v-space"></div>
+						<h2>Bet history</h2>						
+						<form class="form-inline">
+							<div class="form-group">
+								<div class="input-daterange" id="datepicker">
+									<span>From:</span>
+									<div class="input-group">
+										<input type="text" class="input-sm form-inline" name="start"/>
+										<span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">									
+								<div class="input-daterange" id="datepicker">
+									<span>To:</span>
+									<div class="input-group">
+										<input type="text" class="input-sm form-inline" name="end"/>
+										<span class="input-group-addon"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></span>
+									</div>
+								</div>
+							</div>
+						</form>
+						<form class="form-inline">
+							<button class="btn-primary btn">Show</button>
+							<select class="form-control marg-l">
+								<option disabled selected hidden>-</option>
+								<option>All</option>
+								<option>Deposit</option>
+								<option>Withdrawal</option>
+								<option>Bets</option>
+							</select>
+						</form>
+						<table class="table table-bordered text-center" style="margin-top: 10px;">
+							<thead>
+								<tr>
+									<th>Date/Time</th>
+									<th>Total stake</th>
+									<th>Bet type</th>
+									<th>Details</th>
+									<th>Return</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>19 Mar 12:32</td>
+									<td>USD 2.50</td>
+									<td>Double</td>
+									<td>Click here</td>
+									<td>USD 0.00</td>
+								</tr>
+								<tr>
+									<td>19 Mar 12:32</td>
+									<td>USD 2.50</td>
+									<td>Double</td>
+									<td>Click here</td>
+									<td>USD 0.00</td>
+								</tr>
+								<tr>
+									<td>19 Mar 12:32</td>
+									<td>USD 2.50</td>
+									<td>Double</td>
+									<td>Click here</td>
+									<td>USD 0.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		$(window).resize(function(){
+			$w = $(window).outerWidth()
+			$('.header-line').css({
+				width: $w - 60,
+				marginLeft: -($w - 60)/2,
+				left: $w/2
+			});
+			$('.line').css({
+				width: $w - 92
+			});
+			$('.main-content').css({
+				minHeight: $(window).outerHeight() - $('header').outerHeight()
+			});
+		});
+		$(window).resize();
+		$('.input-daterange').datepicker({
+			startView: 1
+		});
+	</script>
+</body>
+</html>
